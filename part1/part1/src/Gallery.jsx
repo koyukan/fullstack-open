@@ -1,13 +1,13 @@
 import Profile from './Profile.jsx'
 
-const Gallery = () => {
 
-    return (
+const Gallery = ({ scientists }) => {
+
+  return (
       <section>
         <h1>Amazing scientists</h1>
-        <Profile />
-        <Profile />
-        <Profile />
+        {scientists.map(scientist => <Profile key={scientist.name} person={scientist} />)}
+
       </section>
     );
   }
